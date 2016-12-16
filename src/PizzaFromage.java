@@ -2,11 +2,18 @@
  * Created by association on 16/12/16.
  */
 public class PizzaFromage extends Pizza {
-    public PizzaFromage() {
-        nom = "Pizza sauce et fromage";
-        pate = "Pâte fine";
-        sauce = "Sauce Marina";
+    FabriqueIngredientsPizza fabriqueIngredientsPizza;
 
-        garnitures.add("Parmigiano reggiano râpé");
+    public PizzaFromage(FabriqueIngredientsPizza fabriqueIngredientsPizza) {
+        this.fabriqueIngredientsPizza = fabriqueIngredientsPizza;
     }
+
+    @Override
+    void preparer() {
+        System.out.println("Préparation de " + nom);
+        pate = fabriqueIngredientsPizza.creerPate();
+        sauce = fabriqueIngredientsPizza.creerSauce();
+        fromage = fabriqueIngredientsPizza.creerFromage();
+    }
+
 }

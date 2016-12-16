@@ -7,17 +7,15 @@ public abstract class Pizza {
     String nom;
     String pate;
     String sauce;
+    Legume legumes[];
+    Fromage fromage;
+    Poivrons poivrons;
+    Moules moules;
+
     ArrayList garnitures = new ArrayList();
 
-    void preparer() {
-        System.out.println("Préparation de " + nom);
-        System.out.println("Étalage de la pâte...");
-        System.out.println("Ajout de la sauce...");
-        System.out.println("Ajout de la garniture: ");
-        for (int i = 0; i < garnitures.size(); i++) {
-            System.out.println("\t" + garnitures.get(i));
-        }
-    }
+    abstract void preparer();
+
     void cuire() {
         System.out.println("Cuisson 25 minutes à 180°");
     }
@@ -30,8 +28,17 @@ public abstract class Pizza {
         System.out.println("Emballage dans une boîte officielle");
     }
 
+    public void setNom(String nom) {
+        this.nom = nom;
+    }
+
     public String getNom() {
         return nom;
+    }
+
+    @Override
+    public String toString() {
+        return nom + " " + pate + " " + sauce;
     }
 }
 
