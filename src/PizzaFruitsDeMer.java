@@ -1,10 +1,10 @@
 /**
- * Created by association on 16/12/16.
+ * Created by association on 11/01/17.
  */
-public class PizzaFromage extends Pizza {
+public class PizzaFruitsDeMer extends Pizza {
     FabriqueIngredientsPizza fabriqueIngredients;
 
-    public PizzaFromage(FabriqueIngredientsPizza fabriqueIngredients) {
+    public PizzaFruitsDeMer(FabriqueIngredientsPizza fabriqueIngredients) {
         this.fabriqueIngredients = fabriqueIngredients;
     }
 
@@ -14,6 +14,6 @@ public class PizzaFromage extends Pizza {
         pate = fabriqueIngredients.creerPate();
         sauce = fabriqueIngredients.creerSauce();
         fromage = fabriqueIngredients.creerFromage();
+        moules = fabriqueIngredients.creerMoules();
     }
-
 }

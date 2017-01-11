@@ -5,8 +5,8 @@ import java.util.ArrayList;
  */
 public abstract class Pizza {
     String nom;
-    String pate;
-    String sauce;
+    Pate pate;
+    Sauce sauce;
     Legume legumes[];
     Fromage fromage;
     Poivrons poivrons;
